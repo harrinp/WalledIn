@@ -42,6 +42,8 @@
 *.idb
 *.pdb
 
+.gitignore
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
