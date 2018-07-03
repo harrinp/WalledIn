@@ -47,5 +47,5 @@ Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLO
 Default (My color scheme black has a blue tint)
 ![Picture 1](https://github.com/harrinp/WalledIn/blob/master/Examples/Empty_Walls.png "PIC1")
 
-Args : walledin -cpn -cw WHITE PINK -w + -t 3
+`Args : walledin -cpn -cw WHITE PINK -w + -t 3`
 ![Picture 2](https://github.com/harrinp/WalledIn/blob/master/Examples/PinkWithI.png "PIC2")
