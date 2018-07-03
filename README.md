@@ -44,8 +44,12 @@ Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLO
 
 ### Example Configurations
 
-Default (My color scheme black has a blue tint)
+`Args : walledin -w *`
 ![Picture 1](https://github.com/harrinp/WalledIn/blob/master/Examples/Empty_Walls.png "PIC1")
 
-`Args : walledin -cpn -cw WHITE PINK -w + -t 3`
+`Args : walledin -cpn -cw WHITE PINK -w + -p I -t 3`
 ![Picture 2](https://github.com/harrinp/WalledIn/blob/master/Examples/PinkWithI.png "PIC2")
+
+For extra challenge you can not color the background and use no character in the walls.
+`Args : walledin -cp BLUE NOCOLOR -cw CYAN NOCOLOR`
+![Picture 3](https://github.com/harrinp/WalledIn/blob/master/Examples/DefaultBackBlue.png "PIC3")

@@ -296,7 +296,7 @@ bool _insertColorFromArg(char * a, short * s){
         (*s) = COLOR_BLUE;
     }
     else if (strcmp(a, "NOCOLOR") == 0){
-        (*s) = 100;
+        (*s) = -1;
     }
     else {
         return true;

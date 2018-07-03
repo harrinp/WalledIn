@@ -67,23 +67,27 @@ int main(int argc, char *argv[]) {
     p.y      = b.height - 3;
     p.avatar = "A";
 
-    short colorPlayerFore, colorPlayerBack, colorWallFore, colorWallBack;
-    colorWallFore = COLOR_WHITE;
-    colorWallBack = COLOR_BLACK;
-    colorPlayerFore = COLOR_RED;
-    colorPlayerBack = COLOR_WHITE;
-    if (handleArgs(&b, &p, argc, argv, &colorPlayerFore, &colorPlayerBack, &colorWallFore, &colorWallBack)){
-        destroyBoard(&b);
-        return 0;
-    }
-    makeTunnels(&b);
     initscr();
     noecho();
     cbreak();
     curs_set(FALSE);
     nodelay(stdscr, TRUE);
-
     start_color();
+    use_default_colors();
+
+    short colorPlayerFore, colorPlayerBack, colorWallFore, colorWallBack;
+    colorWallFore = COLOR_WHITE;
+    colorWallBack = COLOR_BLACK;
+    colorPlayerFore = COLOR_RED;
+    colorPlayerBack = COLOR_WHITE;
+    
+    if (handleArgs(&b, &p, argc, argv, &colorPlayerFore, &colorPlayerBack, &colorWallFore, &colorWallBack)){
+        destroyBoard(&b);
+        return 0;
+    }
+    makeTunnels(&b);
+
+
     if (colorWallFore == 100 || colorWallBack == 100){
         b.wallColor = false;
     }
@@ -98,7 +102,7 @@ int main(int argc, char *argv[]) {
         init_pair(2, colorPlayerFore, colorPlayerBack); // Walls
     }
 
-    use_default_colors();
+
 
     pthread_mutexattr_t shared;
     pthread_mutexattr_init(&shared);
