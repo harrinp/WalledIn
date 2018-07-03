@@ -314,8 +314,8 @@ bool handleArgs(Board * b, Player * p, int argc, char * argv[], short * cpf, sho
             printf(" -cw arg1 arg2 --> Set color of walls (Foreground) (Background) \n");
             printf(" -cp arg1 arg2 --> Set color of player (Foreground) (Background) \n");
             printf("    Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLOR\n" );
-            printf(" -cpn          --> Shortcut to not color player \n");
-            printf(" -cpw          --> Shortcut to not color wall \n");
+            printf(" -ncp          --> Shortcut to not color player \n");
+            printf(" -ncw          --> Shortcut to not color wall \n");
             printf(" -nc           --> Shortcut to not color anything \n");
             printf(" -p arg1       --> Change the character that the player is displayed as. Limit 1 character\n");
             printf(" -w arg1       --> Change the character that the inside of the walls are displayed as. Default is " ". Limit 1 character\n");
@@ -333,11 +333,11 @@ bool handleArgs(Board * b, Player * p, int argc, char * argv[], short * cpf, sho
                 printf("Bad color code - default assumed\n");
             }
         }
-        if (strcmp(argv[i], "-cpn") == 0){
+        if (strcmp(argv[i], "-ncp") == 0){
             (*cpf) = 100;
             noPlayer = true;
         }
-        if (strcmp(argv[i], "-cwn") == 0){
+        if (strcmp(argv[i], "-ncw") == 0){
             (*cwf) = 100;
             noWall = true;
         }
