@@ -9,7 +9,7 @@ LIBS=-lpthread -lncurses
 all: walledin
 
 walledin:
-	gcc $(CFLAGS) Run.c RunMainMulti.c -o walledin $(LIBS)
+	gcc $(CFLAGS) Run.c Args.c RunMainMulti.c -o walledin $(LIBS)
 
 install: walledin
 	mkdir -p $(DESTDIR)$(BINDIR)
