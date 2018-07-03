@@ -33,7 +33,7 @@ Colors differ depending on your terminal and preferences
 -cw arg1 arg2   --> Set color of walls (Foreground) (Background)
 -cp arg1 arg2   --> Set color of player (Foreground) (Background)
 -ncp            --> Shortcut to not color player
--nwp            --> Shortcut to not color wall
+-ncw            --> Shortcut to not color wall
 -nc             --> Shortcut to not color anything
 -p arg1         --> Change the character that the player is displayed as. Limit 1 character
 -w arg1         --> Change the character that the inside of the walls are displayed as. Default is " ". Limit 1 character
@@ -44,7 +44,7 @@ Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLO
 
 ### Example Configurations
 
-`Args : walledin -w *`
+`Args : walledin`
 ![Picture 1](https://github.com/harrinp/WalledIn/blob/master/Examples/Empty_Walls.png "PIC1")
 
 `Args : walledin -cpn -cw WHITE PINK -w + -p I -t 3`
