@@ -1,12 +1,7 @@
 #include "Run.h"
 
-#define NUM_TUNNELS_DIVISOR 20
+#define NUM_TUNNELS_DIVISOR 17
 
-void clearScreen() {
-    const char *CLEAR_SCREEN_ANSI = "\e[1;1H\e[2J";
-
-    write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, 12);
-}
 
 void _makeTunnels(Board *b) {
     b->tunnels    = malloc(sizeof(*b->tunnels) * b->width / NUM_TUNNELS_DIVISOR);
@@ -30,7 +25,12 @@ void getSize(Board *b) {
         b->blocks[i] = malloc(sizeof(**(b->blocks)) * b->width);
     }
     int counter = 0;
-    for (int i = b->height - 1; i >= 0; i--) {
+    for (int i = 0; i < b->height; i++) {
+        b->blocks[i][0] = 1;
+        b->blocks[i][b->width-1] = 1;
+    }
+    for (int i = b->height - b->height / 2; i >= 0; i--) {
+
         for (int j = 0; j < b->width; j++) {
             if (j < counter || j > b->width - counter) {
                 b->blocks[i][j] = 1;
