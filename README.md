@@ -29,17 +29,21 @@ Colors differ depending on your terminal and preferences
 
 ### Command Line arguments
 ```
--h              --> help
--cw arg1 arg2   --> Set color of walls (Foreground) (Background)
--cp arg1 arg2   --> Set color of player (Foreground) (Background)
--ncp            --> Shortcut to not color player
--ncw            --> Shortcut to not color wall
--nc             --> Shortcut to not color anything
--p arg1         --> Change the character that the player is displayed as. Limit 1 character
--w arg1         --> Change the character that the inside of the walls are displayed as. Default is " ". Limit 1 character
--t arg1         --> Change the number of tunnels that will exist at any time. Limit 100
+ -h            --> help
+ -cw arg1 arg2 --> Set color of walls (Foreground) (Background)
+ -cp arg1 arg2 --> Set color of player (Foreground) (Background)
+                -> Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLOR
+ -ncp          --> Shortcut to not color player
+ -ncw          --> Shortcut to not color wall
+ --nocolor     --> Don't color anything (terminal defaults used)
+ -nc           --> Shortcut to not color anything
 
-Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLOR
+ -p arg1       --> Change the character that the player is displayed as. Limit 1 character
+ -w arg1       --> Change the character that the inside of the walls are displayed as. Default is . Limit 1 character
+ -t arg1       --> Change the number of tunnels that will exist at any time. Limit 100
+
+ --nocollision --> Turn off collision mechanics, game runs until you quit
+ -ncol         --> Shortcut to no collision
 ```
 
 ### Example Configurations

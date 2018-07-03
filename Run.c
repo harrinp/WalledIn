@@ -51,7 +51,6 @@ void getSize(Board *b) {
 }
 
 char* _getCharForBlock(Board *b, int line, int pos){
-    //printf("line : %d pos : %d\n", line, pos);
     if (line + 1 > b->height - 1 || pos - 1 <= 0 || pos + 1 >= b->width - 1){
         return b->wallChar;
     }
@@ -164,7 +163,6 @@ bool getInput(Player *p) {
         if (c == EOF || c == ERR) {
             break;
         }
-        printf("%c\n",c );
         switch (c) {
         case 'w': p->y--;
             break;
@@ -241,7 +239,7 @@ void makeLine(Board *b) {
     b->blocks[0][b->width - 1] = 1;
 }
 
-void _printTunnel(Board *b, int tunnelIndex){
+void _printTunnel(Board *b, int tunnelIndex){   //For testing
     printf("Pos: %d Size: %d\n", b->tunnels[tunnelIndex].pos, b->tunnels[tunnelIndex].size);
 }
 
