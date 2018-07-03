@@ -11,8 +11,10 @@ Default install location is usr/local/bin
 
 ## Directions
 
-Launch by typing 'hangman'
+Launch by typing `hangman`
 
 Control with WASD
+
+You get more points the further up you are on screen
 
 Try not to hit the walls
