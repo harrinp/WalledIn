@@ -32,8 +32,8 @@ Colors differ depending on your terminal and preferences
 -h              --> help
 -cw arg1 arg2   --> Set color of walls (Foreground) (Background)
 -cp arg1 arg2   --> Set color of player (Foreground) (Background)
--cpn            --> Shortcut to not color player
--cpw            --> Shortcut to not color wall
+-ncp            --> Shortcut to not color player
+-nwp            --> Shortcut to not color wall
 -nc             --> Shortcut to not color anything
 -p arg1         --> Change the character that the player is displayed as. Limit 1 character
 -w arg1         --> Change the character that the inside of the walls are displayed as. Default is " ". Limit 1 character
