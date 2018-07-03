@@ -18,7 +18,6 @@ void _printScore(){
 
 void *_screenUpdate() {
     int timeCount = 0;
-
     while (1) {
         pthread_mutex_lock(&mutex);
         if (timeCount % 2 == 0) {
@@ -68,6 +67,16 @@ int main(int argc, char *argv[]) {
     p.y      = b.height - 3;
     p.avatar = "A";
 
+    short colorPlayerFore, colorPlayerBack, colorWallFore, colorWallBack;
+    colorWallFore = COLOR_WHITE;
+    colorWallBack = COLOR_BLACK;
+    colorPlayerFore = COLOR_RED;
+    colorPlayerBack = COLOR_WHITE;
+    if (handleArgs(&b, &p, argc, argv, &colorPlayerFore, &colorPlayerBack, &colorWallFore, &colorWallBack)){
+        destroyBoard(&b);
+        return 0;
+    }
+    makeTunnels(&b);
     initscr();
     noecho();
     cbreak();
@@ -75,8 +84,20 @@ int main(int argc, char *argv[]) {
     nodelay(stdscr, TRUE);
 
     start_color();
-    init_pair(1, COLOR_WHITE, COLOR_BLACK); // Walls
-    init_pair(2, COLOR_RED, COLOR_WHITE);  // Player
+    if (colorWallFore == 100 || colorWallBack == 100){
+        b.wallColor = false;
+    }
+    else {
+        init_pair(1, colorWallFore, colorWallBack); // Walls
+    }
+
+    if (colorPlayerFore == 100 || colorPlayerBack == 100){
+        b.playerColor = false;
+    }
+    else {
+        init_pair(2, colorPlayerFore, colorPlayerBack); // Walls
+    }
+
     use_default_colors();
 
     pthread_mutexattr_t shared;
@@ -97,17 +118,15 @@ int main(int argc, char *argv[]) {
 
     mvprintw(p.y + 1, p.x - 10, ",----------------------,");
     mvprintw(p.y + 2, p.x - 10, "|  THANKS FOR PLAYING  |");
-    mvprintw(p.y + 3, p.x - 10, "|    Press q twice     |");
+    mvprintw(p.y + 3, p.x - 10, "| >Press any key twice |");
     mvprintw(p.y + 4, p.x - 10, "'----------------------'");
-
 
     refresh();
 
-
     nodelay(stdscr, FALSE);
-    do {
-        /* code */
-    } while('q' != getch());
+    while (getch() == ERR){
+
+    }
     // while ('q' != getch()){}
     getch();
     endwin();

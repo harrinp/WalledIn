@@ -21,6 +21,9 @@ typedef struct _Board {
     int numTunnels;
     Tunnel * tunnels;
     int score;
+    bool playerColor;
+    bool wallColor;
+    char * wallChar;
 } Board;
 
 typedef struct _Player {
@@ -30,12 +33,13 @@ typedef struct _Player {
 } Player;
 
 void printScreen(Board *, Player *);
-void clearScreen();
 bool getInput(Player *);
 void getSize(Board *);
 void destroyBoard(Board *);
 void moveWalls(Board *);
 bool checkCollision(Board *, Player *);
 void makeLine(Board *);
+void makeTunnels(Board *);
 void changeTunnels(Board *);
 void updateTunnelPos(Board *);
+bool handleArgs(Board *, Player *, int, char **, short *, short *, short *, short *);
