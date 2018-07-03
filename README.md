@@ -1,5 +1,5 @@
 # Walled In
-Small command line game of not touching the walls. Great for wasting time at work!
+Retro command line game of not touching the walls. Great for wasting time at work!
 
 ![Show-off video](https://github.com/harrinp/WalledIn/blob/master/walledinvid.gif "Show off Video")
 
