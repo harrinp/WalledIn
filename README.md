@@ -36,7 +36,7 @@ Colors differ depending on your terminal and preferences
 -cpw            --> Shortcut to not color wall
 -nc             --> Shortcut to not color anything
 -p arg1         --> Change the character that the player is displayed as. Limit 1 character
--w arg1         --> Change the character that the inside of the walls are displayed as. Limit 1 character
+-w arg1         --> Change the character that the inside of the walls are displayed as. Default is " ". Limit 1 character
 -t arg1         --> Change the number of tunnels that will exist at any time. Limit 100
 
 Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLOR
@@ -44,6 +44,8 @@ Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLO
 
 ### Example Configurations
 
+Default (My color scheme black has a blue tint)
 ![Picture 1](https://github.com/harrinp/WalledIn/blob/master/Examples/Empty_Walls.png "PIC1")
 
+Args : walledin -cpn -cw WHITE PINK -w + -t 3
 ![Picture 2](https://github.com/harrinp/WalledIn/blob/master/Examples/PinkWithI.png "PIC2")

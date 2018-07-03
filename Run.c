@@ -46,7 +46,7 @@ void getSize(Board *b) {
     b->score = 0;
     b->wallColor = true;
     b->playerColor = true;
-    b->wallChar = "*";
+    b->wallChar = " ";
     b->numTunnels = 0;
 }
 
@@ -318,7 +318,7 @@ bool handleArgs(Board * b, Player * p, int argc, char * argv[], short * cpf, sho
             printf(" -cpw          --> Shortcut to not color wall \n");
             printf(" -nc           --> Shortcut to not color anything \n");
             printf(" -p arg1       --> Change the character that the player is displayed as. Limit 1 character\n");
-            printf(" -w arg1       --> Change the character that the inside of the walls are displayed as. Limit 1 character\n");
+            printf(" -w arg1       --> Change the character that the inside of the walls are displayed as. Default is " ". Limit 1 character\n");
             printf(" -t arg1       --> Change the number of tunnels that will exist at any time. Limit 100\n");
             printf("\nWalled In by Paul Harrington\n");
             return true;
