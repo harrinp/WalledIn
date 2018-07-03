@@ -1,7 +1,7 @@
 # Walled In
 Retro command line game of not touching the walls. Great for wasting time at work! Appearance is fully customizable through command line arguments, see below.
 
-![Show-off video](https://github.com/harrinp/WalledIn/blob/master/walledinvid.gif "Show off Video")
+![Show-off video](https://github.com/harrinp/WalledIn/blob/master/Examples/walledinvid.gif "Show off Video")
 
 ## Install
 ```
@@ -44,6 +44,6 @@ Available color arguments: RED, BLACK, WHITE, GREEN, MAGENTA, CYAN, BLUE, NOCOLO
 
 ### Example Configurations
 
-![Picture 1](https://github.com/harrinp/WalledIn/blob/master/Empty_Walls.png "PIC1")
+![Picture 1](https://github.com/harrinp/WalledIn/blob/master/Examples/Empty_Walls.png "PIC1")
 
-![Picture 2](https://github.com/harrinp/WalledIn/blob/master/PinkWithI.png "PIC2")
+![Picture 2](https://github.com/harrinp/WalledIn/blob/master/Examples/PinkWithI.png "PIC2")
