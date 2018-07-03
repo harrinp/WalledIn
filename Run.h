@@ -42,4 +42,4 @@ void makeLine(Board *);
 void makeTunnels(Board *);
 void changeTunnels(Board *);
 void updateTunnelPos(Board *);
-bool handleArgs(Board *, Player *, int, char **, short *, short *, short *, short *);
+bool handleArgs(Board *, Player *, int, char **, short *, short *, short *, short *, bool *);

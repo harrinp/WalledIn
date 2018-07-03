@@ -4,6 +4,7 @@ Board           b;
 Player          p;
 bool            quit  = false;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+bool contact = true;
 
 void _printScore(){
     mvprintw(0, 0, ".                .");
@@ -28,7 +29,7 @@ void *_screenUpdate() {
         if (timeCount % 5 == 0) {
             changeTunnels(&b);
         }
-        if (checkCollision(&b, &p)) {
+        if (contact && checkCollision(&b, &p)) {
             quit = true;
             break;
         }
@@ -73,7 +74,7 @@ int main(int argc, char *argv[]) {
     colorPlayerFore = COLOR_RED;
     colorPlayerBack = COLOR_WHITE;
 
-    if (handleArgs(&b, &p, argc, argv, &colorPlayerFore, &colorPlayerBack, &colorWallFore, &colorWallBack)){
+    if (handleArgs(&b, &p, argc, argv, &colorPlayerFore, &colorPlayerBack, &colorWallFore, &colorWallBack, &contact)){
         destroyBoard(&b);
         return 0;
     }
@@ -100,8 +101,6 @@ int main(int argc, char *argv[]) {
     else {
         init_pair(2, colorPlayerFore, colorPlayerBack); // Walls
     }
-
-
 
     pthread_mutexattr_t shared;
     pthread_mutexattr_init(&shared);
