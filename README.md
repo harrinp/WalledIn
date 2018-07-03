@@ -1,5 +1,7 @@
-# WalledIn
+# Walled In
 Small command line game of not touching the walls. Great for wasting time at work!
+
+![Show-off video](https://github.com/harrinp/WalledIn/blob/master/walledinvid.gif "Show off Video")
 
 ## Install
 ```
@@ -11,14 +13,14 @@ Default install location is usr/local/bin
 
 ## Directions
 
-Launch by typing `hangman`
+Launch by typing `walledin`
 
 Control with WASD
 
 You get more points the further up you are on screen
 
-![Show-off video](https://github.com/harrinp/WalledIn/blob/master/walledinvid.gif "Show off Video")
-
-
-
 Try not to hit the walls
+
+## Details
+
+Fully implemented in c
