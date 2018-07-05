@@ -1,4 +1,5 @@
 #include "Run.h"
+#include "Config.h"
 
 Board           b;
 Player          p;
@@ -129,7 +130,6 @@ int main(int argc, char *argv[]) {
     while (getch() == ERR){
 
     }
-    // while ('q' != getch()){}
     getch();
     nocbreak();
     endwin();

@@ -1,4 +1,5 @@
 #include "Run.h"
+#include "Config.h"
 
 #define NUM_TUNNELS_DIVISOR 15
 
@@ -46,7 +47,7 @@ void getSize(Board *b) {
     b->score = 0;
     b->wallColor = true;
     b->playerColor = true;
-    b->wallChar = " ";
+    b->wallChar = WALLCHAR;
     b->numTunnels = 0;
 }
 
@@ -164,19 +165,19 @@ bool getInput(Player *p) {
             break;
         }
         switch (c) {
-        case 'w': p->y--;
+        case UP: p->y--;
             break;
 
-        case 's': p->y++;
+        case DOWN: p->y++;
             break;
 
-        case 'a': p->x--;
+        case LEFT: p->x--;
             break;
 
-        case 'd': p->x++;
+        case RIGHT: p->x++;
             break;
 
-        case 'q': quit = true;
+        case QUIT: quit = true;
             break;
         }
     }

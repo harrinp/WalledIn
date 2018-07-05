@@ -1,3 +1,6 @@
+#ifndef RUN_H
+#define RUN_H
+
 #include <stdio.h>
 #include <sys/ioctl.h>
 #include <stdlib.h>
@@ -43,3 +46,5 @@ void makeTunnels(Board *);
 void changeTunnels(Board *);
 void updateTunnelPos(Board *);
 bool handleArgs(Board *, Player *, int, char **, short *, short *, short *, short *, bool *);
+
+#endif

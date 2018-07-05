@@ -15,3 +15,6 @@ install: walledin
 	mkdir -p $(DESTDIR)$(BINDIR)
 	cp walledin $(DESTDIR)$(BINDIR)/
 	chmod 755 ${DESTDIR}${BINDIR}/walledin
+clean:
+	rm walledin
+	rm ${DESTDIR}${BINDIR}/walledin

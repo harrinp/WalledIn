@@ -1,4 +1,5 @@
 #include "Run.h"
+#include "Config.h"
 
 bool _insertColorFromArg(char * a, short * s){
     if ( strcmp(a, "RED") == 0){
@@ -23,7 +24,7 @@ bool _insertColorFromArg(char * a, short * s){
         (*s) = COLOR_BLUE;
     }
     else if (strcmp(a, "NOCOLOR") == 0){
-        (*s) = -1;
+        (*s) = NOCOLOR;
     }
     else {
         return true;
