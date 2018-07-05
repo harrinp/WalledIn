@@ -200,6 +200,12 @@ bool checkCollision(Board *b, Player *p) {
         p->y = 0 + 1;
     }
     if (p->x >= b->width){
+        p->x -= 1;
+    }
+    if (p->x <= 0){
+        p->x = 0 + 1;
+    }
+    if (p->y >= b->height){
         p->y -= 1;
     }
     if (b->blocks[p->y][p->x] == 1) {
@@ -259,7 +265,7 @@ void updateTunnelPos(Board *b) {
 
     for (int i = 0; i < b->numTunnels; i++) {
         b->tunnels[i].pos += b->tunnels[i].direction;
-        if (b->tunnels[i].pos + b->tunnels[i].size / 2 > b->width || b->tunnels[i].pos + b->tunnels[i].size / 2 < 0) {
+        if (b->tunnels[i].pos + b->tunnels[i].size / 2 > b->width || b->tunnels[i].pos - b->tunnels[i].size / 2 < 0) {
             b->tunnels[i].direction *= -1;
             b->tunnels[i].pos += b->tunnels[i].direction;
         }

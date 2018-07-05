@@ -44,7 +44,7 @@ void *_screenUpdate() {
         _printScore();
         refresh();
         pthread_mutex_unlock(&mutex);
-        usleep(200000);
+        usleep(150000);
         timeCount++;
         b.score += b.height - p.y;
     }
