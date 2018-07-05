@@ -11,6 +11,16 @@ Retro command line game of not touching the walls. Great for wasting time at wor
 ```
 Default install location is usr/local/bin
 
+### Reinstall
+```
+make clean
+make install
+```
+### Change Default Configuration
+Open `Config.h` in your editor of choice and change any of the defaults, there are directions inside. Then install/reinstall. You must reinstall to apply changes in the Config file, recloning the project will overwrite your Config.h.
+
+Walled In may switch to a dynamic config file in the future, but at the moment there aren't really enough defaults that need to be set for me to justify making one. I tend to err on the side of putting less files on a users computer.
+
 ## Directions
 
 Launch by typing `walledin`
@@ -27,7 +37,7 @@ Fully implemented in c
 
 Colors differ depending on your terminal and preferences
 
-### Command Line arguments
+### Command Line Arguments
 ```
  -h            --> help
  -cw arg1 arg2 --> Set color of walls (Foreground) (Background)
